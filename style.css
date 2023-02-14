@@ -1,0 +1,225 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+}
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(38, 38, 38, 0.5);
+
+    
+}
+
+nav .container, footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+   
+
+}
+
+.nav-logo {
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    /*Można użyć tego rozwiązania zamiast tego w komentarzu na dole*/
+}
+
+
+/* .nav-links a{
+    margin-right: 30px;
+}
+
+.nav-links a:last-of-type{  TU POJAWIA SIE PSEUDO KLASA
+    margin-right: 0px;
+} */
+
+.nav-links a {/*USTAWIAMY DLUGOSC TRWANIA ANIMACJI*/
+    transition: .5s all;
+}
+
+.nav-links a:hover, .nav-logo:hover{/*USTAWIAM ANIMACJE. PO NAJECHANIU NA LINK-POWIEKSZY SIE*/
+    transform: scale(1.2);/*w SKALI DZIESIETNEJ GDZIE PIERWSZE 1 TO 100% A DRUGIE PO KROPCE TO ILE MA SIE POWIEKSZYĆ TUTAJ .1 CZYLI 10%*/
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+
+.landing-page {
+    width: 100vw;/*Ten width może być pominięty, bo to element blokowy*/
+    /* height: calc(100vh - 70px); */
+    height: 100vh;
+    background-image: url('dinosaur.jpg');
+    background-position: center;
+    background-size: cover;/*Jesli zdj.byłoby za małe, to aby nie powstała kopia dodaje cover*/
+
+}
+
+.landing-page-shadow {
+    width: 100%;  /*TEJ WYSOKOŚCI NIE MUSZE PODAWAĆ, BO JEST TO ELEMENT BLOKOWY*/
+    height: 100%;
+    background-color: rgba(0,0,0, 0.3);  /*rgba - paleta red green blue alpha. Zapis .3 to skrócony zapis 0.3 */
+}
+
+.landing-page-shadow .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.landing-page-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 40%;
+    color: white;
+}
+
+
+.landing-page-text h2 {
+    font-size: 24px;
+}
+
+.landing-page-text button {
+    background: none;
+    padding: 5px 10px;
+    border: 3px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.landing-page-text button:hover {
+    background-color: white;
+    color: black;
+}
+.offer {
+    padding: 5% 0;
+    background-color: black;
+    color: white;
+}
+
+.offer h1 {
+    margin-bottom: 50px;
+}
+
+.offer h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;   
+}
+
+.offer h3{
+    font-size: 12px;
+}
+
+.offer-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.offer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 150px;
+    margin-right:5%;
+    margin-bottom: 5%;
+    /* background-color: #7b66Bd; */
+    background: linear-gradient(to  bottom,#6c54b5,#8a78c5, #a99bd4,#cac3e0);
+}
+.offer-box h2:hover, h3:hover {
+    transform: scale(1.6); /*Sprawia, że po najechaniu tekst sie powieksza*/  
+}
+
+.offer-box h2, h3 {
+    transition: .5s all;/*Sprawia, że powiekszenie jest płynne*/
+    cursor: zoom-in;
+}
+
+
+.offer-box:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+/* Footer container settings on top of this file */
+
+footer {
+    background-color: rgba(255, 255, 255, 0.829);
+    /* border-top-left-radius: 80px;
+    border-top-right-radius: 80px; Jesli wolę stylizować tylko górę */
+    border-radius: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-social{
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* position: absolute; */
+    
+    text-align: center;
+}
+
+.footer-social ul{
+    list-style: none;
+}
+
+.footer-social ul li{
+    display: inline-block;
+    margin: 0 4px 0 0;
+}
+
+.footer-social ul li a{
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    color: black;
+    background-color: white;
+    border-radius: 35%;
+    display: inline-block;
+    transition: .3;
+}
+.footer-social ul li a:hover{
+    color: white;
+    background-color: #8a78c5;
+
+}
